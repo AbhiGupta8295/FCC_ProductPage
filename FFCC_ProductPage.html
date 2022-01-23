@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<title>Sample Product page</title>
+    <style>
+
+    header {
+    position: fixed;
+    top: 0;
+    left:0;
+    padding:auto;
+    margin-right:auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:black;
+    z-index: 1;
+    }
+
+    #header-img{
+      width:10%;
+      padding-left:4rem;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+    #nav-bar{
+      font-weight:bold;
+      font-family:'Lato', sans-serif;
+      padding-right:8rem;
+
+    }
+    ul{
+      display:flex;
+      font-size:1rem;
+    }
+    ol{
+      font-size: 1.2rem;
+    }
+    li{
+      display:flex;
+      padding-right:1.5rem;
+    }
+    .nav-link{
+
+    }
+    h1{
+      font-family:Sans-serif;
+      text-align:center;
+      margin-top:inherit;
+      font-size:3rem;
+      margin-top:100px
+    }
+    h2{
+      font-family:Sans-serif;
+      font-size:2rem;
+      margin-top:-2rem;
+      font-weight:1;
+    }
+    h3{
+      font-size: 1.5rem;
+      margin-bottom:-5px;
+    }
+    #tag{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 20rem;
+
+    }
+    .grid-o{
+      display: flex;
+      flex-direction: row-reverse;
+      margin:auto;
+      margin-left: 10rem;
+    }
+    .grid-e{
+      display: flex;
+      flex-direction: row;
+      margin:auto;
+      margin-right: 10rem;
+    }
+    #specifications{
+
+      padding-right:10px;
+
+    }
+    .spec1-o{
+      font-weight: bold;
+      font-size:3rem;
+      margin-top: 3rem;
+      max-width:75%;
+    }
+    .spec-o{
+      width:110%;
+      margin-left:-10rem;
+      margin-top: 4rem;
+      animation-name: fade;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-delay: 1.5s;
+
+      }
+      .spec-e{
+        width:100%;
+        margin-left:10rem;
+        margin-top: 4rem;
+        animation-name: fade;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.5s;
+
+        }
+    #contact-us{
+      padding-right:10px;
+
+      margin-top: 20em;
+    }
+    #video{
+      margin: auto;
+      padding-right: 20rem;
+      width:180px;
+      height:240px;
+    }
+    .img{
+      text-align: center;
+      max-width: 100%;
+      height: auto;
+      margin-bottom:15rem;
+    }
+
+    .desc1{
+      font-family:Arial;
+      font-weight: lighter;
+      font-size: 1.2rem;
+      max-width:50%;
+      line-height: 1.8rem;
+    }
+    .desc{
+      font-family:Arial;
+      font-weight:bold;
+      font-size: 1.2rem;
+      max-width:50%;
+      margin-top: 1rem;
+      margin-left:1rem;
+    }
+    #form{
+      text-align:center;
+    }
+    label {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    p{
+      font-weight:bold;
+      font-size:1.5rem;
+      margin-top:-5px;
+      margin-bottom:5px;
+      word-wrap: break-word;
+    }
+    .back-col{
+      background-color: #DBDBDB;
+      padding-bottom: 5rem;
+    }
+    .disp{
+      display: flex;
+      align-items: center;
+    }
+    .img-icon{
+      width:3%;
+    }
+    #email{
+      width: 15%;
+      background-color:white;
+      padding:4px 2px 4px 2px;
+      margin-top:-4px;
+      font-size:1rem;
+    }
+    #submit{
+      font-size: 1.2rem;
+      background-color: rgb(88, 88, 232);
+      margin: center;
+      margin-top: 1.5rem;
+      padding: 0.375rem 0.75rem;
+      border-radius: 5px;
+      background-color:white;
+      color:black;
+      margin-bottom:5rem;
+
+    }
+
+    #submit:hover{
+      animation-name: background-color;
+      animation-duration:500ms;
+      animation-fill-mode: forwards;
+      cursor:pointer;
+    }
+    @keyframes background-color {
+      100%{
+        background-color:black;
+        color:white;
+      }
+}
+    @keyframes fade {
+    0%{
+      opacity:0.1;
+    }  100%{
+      opacity:1;
+    }
+    }
+
+
+  @media (max-width: 550px) {
+  #specifications .desc .desc1 {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+.align-center{
+  text-align: center;
+  margin-left: 10rem;
+}
+
+footer{
+  margin-top:2rem;
+  text-align: center;
+  background-color: black;
+  margin-left: 0px;
+  color: white;
+}
+
+</style>
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="https://freight.cargo.site/w/1920/q/94/i/bf57e93e6d6a84e8a8a8fa25a7a8ce24055dfadcb8256fc35d92403d4478a279/Logo-Lettering_Black-BG.jpg" alt="original noise logo">
+      <nav class="nav-link" id="nav-bar">
+      <ul>
+      <li><a class="nav-link" href="#specifications">Specifications</a></li>
+        <li><a class="nav-link" href="#video">Highlights</a></li>
+        <li><a class="nav-link" href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="tag">
+    <h1><strong>Noise One</strong></h1>
+    <h2>Power of One</h2>
+    </section>
+    <form id="form">
+        <div>
+          <p>Subscribe to our newsletter</p>
+          <label id="email" for="email" action="https://www.freecodecamp.com/email-submit"></label>
+          <input type="email" id="email" name="email" placeholder=" Enter your email address"><br>
+          <input type="button" id="submit" value="Subscribe">
+          <!-- <button id="submit" type="button" name="button">Subscribe</button> -->
+        </div>
+      </form>
+    <div class="img">
+    <img src="https://cdn.shopify.com/s/files/1/0997/6284/files/final-model-render-745-copy_900x.png?v=1605957361" alt="Noise headphones">
+    </div>
+    <section style="margin-bottom:10rem" id="specifications">
+
+      <div class="grid-o">
+        <div>
+        <img style="width:120%" class="spec-o" src="https://cdn.shopify.com/s/files/1/0997/6284/files/final-model-render-735-copy_765x.png?v=1605959780">
+        </div>
+      <div>
+      <h2 class="spec1-o">Get uncompromised <br>sound</h2>
+      <p class="desc1">Noise One features Tru BassTM technology that delivers punchy bass and an over-the-ear design with 40mm speaker driver that offers passive noise isolation so you can focus on pure music.</p>
+
+      <div class="disp">
+        <img class="img-icon" src="https://cdn.shopify.com/s/files/1/0997/6284/files/bASS.svg?v=1606114794">
+        <p class="desc" style="margin-top:1rem">Tru BassTM technology</p>
+      </div>
+
+      <div class="disp">
+        <img class="img-icon" src="https://cdn.shopify.com/s/files/1/0997/6284/files/Speaker_Driver.svg?v=1606114156">
+        <p class="desc">40mm speaker driver</p>
+      </div>
+      </div>
+    </div>
+    </section>
+
+        <section style="margin-bottom:10rem" class="back-col" id="specifications">
+          <div class="grid-e">
+      <div>
+      <img style="width:140%" class="spec-e" src="https://cdn.shopify.com/s/files/1/0997/6284/files/ellipse_765x.png?v=1606031788">
+      </div>
+    <div style="margin-top:5rem">
+    <h2 style="margin-left:40rem" class="spec1-o">Make your<br>music last</h2>
+    <p style="margin-left:40rem" class="desc1">It’s always music time with Noise One. Listen to your favourite tunes continuously for 16 hours; and when the headphones run out of juice, just plug in the auxiliary wire to start where you left off.</p>
+
+    <div class="disp">
+      <img style="margin-left:40rem" class="img-icon" src="https://cdn.shopify.com/s/files/1/0997/6284/files/batteryiconblack.svg?v=1609487142">
+      <p  class="desc">16-hour playtime</p>
+    </div>
+
+    </div>
+    </div>
+    </section>
+
+    <section style="margin-bottom:10rem" id="specifications">
+
+      <div class="grid-o">
+        <div style="margin-right:8rem;">
+        <img style="width:180%" class="spec-o" src="https://cdn.shopify.com/s/files/1/0997/6284/files/final-model-render-814_765x.png?v=1606033478">
+        </div>
+      <div>
+      <h2 class="spec1-o">Just take it and go</h2>
+      <p class="desc1">Noise One is light on weight with soft pads on the band and cups that ensure lasting comfort even after hours of use. While the design safeguards against distraction, the 90-degree rotatable cups make them travel friendly.</p>
+
+      <div class="disp">
+        <img style="margin-top:1rem" class="img-icon" src="https://cdn.shopify.com/s/files/1/0997/6284/files/Comfort_fit_13ea3b6e-68de-4e2a-b802-05f2ada9ad9a.svg?v=1606114155">
+        <p style="margin-top:1rem" class="desc" style="margin-top:1rem">Comfort Fit</p>
+      </div>
+
+      <div class="disp">
+        <img style="margin-top:1.5rem" class="img-icon" src="https://cdn.shopify.com/s/files/1/0997/6284/files/leaficonblack.svg?v=1609487441">
+        <p class="desc">Lightweight design</p>
+      </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="video">
+      <iframe width="600" height="400"
+      src="https://www.youtube.com/embed/KQPVDuPbWC0">
+    </iframe>
+    </section>
+
+  </body>
+    <footer id="contact-us">
+      <h3 style="margin-left:-79rem"> For more information</h3>
+      <ul style="margin-left:-2.5rem" class="align-center">
+        <li style="font-size:1.2rem" >Get Support: noise_support@example.com</li>
+        <li style="font-size:1.2rem" >Phone: 0123-4567890</li>
+      </ul>
+    <hr><br>
+    <p style="font-size:1rem" >Copyright © 2021, Noise. All Rights Reserved.</p>
+  </footer>
+
+</html>
